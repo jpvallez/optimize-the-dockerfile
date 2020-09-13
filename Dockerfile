@@ -19,6 +19,6 @@ FROM alpine:latest
 EXPOSE 8000
 WORKDIR /app
 COPY --from=0 /app .
-CMD ["/app/golang-test"] 
+ENTRYPOINT ["/app/golang-test"] 
 
 # Our image to deploy is 12.6MB rather than the original ~300MB
